@@ -72,8 +72,7 @@ class ServiceHomeScreen extends StatelessWidget {
                 const CircleAvatar(
                   radius: 25,
                   // backgroundColor: Color(0xff32d74b),
-                  backgroundImage: NetworkImage(
-                      "https://i.pinimg.com/564x/e5/a3/a5/e5a3a59f732d25419dc2cd33d1845104.jpg"),
+                  backgroundImage: NetworkImage("https://i.pinimg.com/564x/e5/a3/a5/e5a3a59f732d25419dc2cd33d1845104.jpg"),
                 ),
               ],
             ),

@@ -3,6 +3,7 @@ import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:tcms_group4/Screen/finances.dart';
 import 'package:tcms_group4/Screen/home.dart';
 import 'package:tcms_group4/Screen/services.dart';
+import 'package:tcms_group4/Screen/transaction.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -48,12 +49,24 @@ class _BottomNavBarState extends State<BottomNavBar> {
             '/second': (context) => const ServiceHomeScreen(),
           },
         ),
+      ),
+      PersistentBottomNavBarItem(
+        icon: const Icon(Icons.account_balance_wallet),
+        title: ("Transactions"),
+        activeColorPrimary: Colors.green,
+        inactiveColorPrimary: Colors.grey,
+        routeAndNavigatorSettings: RouteAndNavigatorSettings(
+          initialRoute: '/',
+          routes: {
+            '/third': (context) => MyDetailsScreen(),
+          },
+        ),
       )
     ];
   }
 
   List<Widget> _buildScreens() {
-    return [const ServiceHomeScreen(), Home()];
+    return [const ServiceHomeScreen(), Home(), MyDetailsScreen()];
   }
 
   @override
