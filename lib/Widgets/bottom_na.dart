@@ -53,7 +53,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   }
 
   List<Widget> _buildScreens() {
-    return [Home(), const ServiceHomeScreen()];
+    return [const ServiceHomeScreen(), Home()];
   }
 
   @override

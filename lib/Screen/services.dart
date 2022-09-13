@@ -96,7 +96,19 @@ class ServiceHomeScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 0, 10, 0),
                     child: Column(
-                      children: const [Text("in"), Text("out")],
+                      children: const [
+                        // Text("in"), Text("out")
+                        Icon(
+                          Icons.arrow_upward,
+                          color: Colors.green,
+                          size: 18.0,
+                        ),
+                        Icon(
+                          Icons.arrow_downward,
+                          color: Colors.red,
+                          size: 18.0,
+                        ),
+                      ],
                     ),
                   )
                 ],
