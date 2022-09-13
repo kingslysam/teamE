@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:tcms_group4/Screen/finances.dart';
-import 'package:tcms_group4/Screen/personalised.dart';
+import 'package:tcms_group4/Screen/home.dart';
+import 'package:tcms_group4/Screen/services.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -26,31 +27,25 @@ class _BottomNavBarState extends State<BottomNavBar> {
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.home),
         title: "Home",
-        activeColorPrimary: Colors.blue,
+        activeColorPrimary: Colors.green,
         inactiveColorPrimary: Colors.grey,
         inactiveColorSecondary: Colors.purple,
-      ),
-      PersistentBottomNavBarItem(
-        icon: const Icon(Icons.account_balance_wallet),
-        title: ("Finances"),
-        activeColorPrimary: Colors.teal,
-        inactiveColorPrimary: Colors.grey,
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
           initialRoute: '/',
           routes: {
-            '/first': (context) => FinanceSCreen(),
+            '/first': (context) => Home(),
           },
         ),
       ),
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.account_balance_wallet),
-        title: ("Finances"),
-        activeColorPrimary: Colors.teal,
+        title: ("Services"),
+        activeColorPrimary: Colors.green,
         inactiveColorPrimary: Colors.grey,
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
           initialRoute: '/',
           routes: {
-            '/first': (context) => FinanceSCreen(),
+            '/second': (context) => const ServiceHomeScreen(),
           },
         ),
       )
@@ -58,7 +53,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   }
 
   List<Widget> _buildScreens() {
-    return [PersonalisedServices(), FinanceSCreen()];
+    return [Home(), const ServiceHomeScreen()];
   }
 
   @override

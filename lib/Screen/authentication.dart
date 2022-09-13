@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tcms_group4/Screen/register.dart';
 import 'package:tcms_group4/Screen/services.dart';
+import 'package:tcms_group4/Widgets/bottom_na.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key, required this.title}) : super(key: key);
@@ -82,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ServiceHomeScreen()));
+                              builder: (context) => const BottomNavBar()));
                       // if (_formKey.currentState!.validate()) {}
                     },
                     style: ElevatedButton.styleFrom(

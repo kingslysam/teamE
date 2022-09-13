@@ -7,66 +7,61 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          iconTheme: const IconThemeData(color: Colors.black),
-          elevation: 0,
-        ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        "Your Balance:",
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.baseline,
-                        textBaseline: TextBaseline.alphabetic,
-                        children: [
-                          const Text(
-                            '\Tsh',
-                            style: TextStyle(
-                              color: Color(0xff32d74b),
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            amount,
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 40,
-                              fontWeight: FontWeight.w900,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  const CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Color(0xff32d74b),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 40,
-              ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     Column(
+              //       crossAxisAlignment: CrossAxisAlignment.start,
+              //       children: [
+              //         const Text(
+              //           "Your Balance:",
+              //           style: TextStyle(
+              //             color: Colors.white,
+              //           ),
+              //         ),
+              //         const SizedBox(
+              //           height: 5,
+              //         ),
+              //         Row(
+              //           crossAxisAlignment: CrossAxisAlignment.baseline,
+              //           textBaseline: TextBaseline.alphabetic,
+              //           children: [
+              //             const Text(
+              //               '\Tsh',
+              //               style: TextStyle(
+              //                 color: Color(0xff32d74b),
+              //                 fontSize: 20,
+              //                 fontWeight: FontWeight.bold,
+              //               ),
+              //             ),
+              //             const SizedBox(
+              //               width: 10,
+              //             ),
+              //             Text(
+              //               amount,
+              //               style: const TextStyle(
+              //                 color: Colors.white,
+              //                 fontSize: 40,
+              //                 fontWeight: FontWeight.w900,
+              //               ),
+              //             ),
+              //           ],
+              //         ),
+              //       ],
+              //     ),
+              //     const CircleAvatar(
+              //       radius: 30,
+              //       backgroundColor: Color(0xff32d74b),
+              //     ),
+              //   ],
+              // ),
+              // const SizedBox(
+              //   height: 40,
+              // ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
