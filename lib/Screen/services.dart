@@ -6,26 +6,8 @@ class ServiceHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
+    return SafeArea(
       child: Scaffold(
-        appBar: NewGradientAppBar(
-          actions: const [
-            Icon(
-              Icons.settings,
-              size: 25,
-            ),
-          ],
-          title: const Text("CRDB"),
-          bottom: const TabBar(tabs: <Widget>[
-            Tab(
-              text: 'Home',
-            ),
-            Tab(
-              text: 'Expenses',
-            )
-          ]),
-        ),
         body: Column(
           children: [
             Row(
@@ -45,7 +27,7 @@ class ServiceHomeScreen extends StatelessWidget {
                       "welcome",
                       style: TextStyle(
                         color: Colors.white70,
-                        fontSize: 17,
+                        fontSize: 12,
                         fontWeight: FontWeight.w900,
                       ),
                     ),
@@ -53,7 +35,7 @@ class ServiceHomeScreen extends StatelessWidget {
                       "driftwood",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 25,
+                        fontSize: 18,
                         fontWeight: FontWeight.w900,
                       ),
                     )
@@ -64,12 +46,30 @@ class ServiceHomeScreen extends StatelessWidget {
                 ),
                 const CircleAvatar(
                   radius: 30,
-                  backgroundColor: Color(0xff32d74b),
+                  // backgroundColor: Color(0xff32d74b),
+                  backgroundImage: NetworkImage(
+                      "https://i.pinimg.com/564x/e5/a3/a5/e5a3a59f732d25419dc2cd33d1845104.jpg"),
                 ),
               ],
             ),
             const SizedBox(
               height: 40,
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(15, 0, 0, 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: const [
+                  Text(
+                    "Services",
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                ],
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -82,7 +82,7 @@ class ServiceHomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(
                       right: 20.0, left: 20.0, top: 10.0, bottom: 10.0),
                   decoration: BoxDecoration(
-                    color: Color(979797),
+                    color: const Color(979797),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: const [
                       BoxShadow(
@@ -109,7 +109,7 @@ class ServiceHomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(
                       right: 20.0, left: 20.0, top: 10.0, bottom: 10.0),
                   decoration: BoxDecoration(
-                    color: Color(979797),
+                    color: const Color(979797),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: const [
                       BoxShadow(
@@ -136,7 +136,7 @@ class ServiceHomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(
                       right: 20.0, left: 20.0, top: 10.0, bottom: 10.0),
                   decoration: BoxDecoration(
-                    color: Color(979797),
+                    color: const Color(979797),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: const [
                       BoxShadow(
@@ -171,7 +171,34 @@ class ServiceHomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(
                       right: 20.0, left: 20.0, top: 10.0, bottom: 10.0),
                   decoration: BoxDecoration(
-                    color: Color(979797),
+                    color: const Color(979797),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 1,
+                        blurRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: const Text(
+                    "Withdraw",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15,
+                    ),
+                  ),
+                ),
+                Container(
+                  constraints: const BoxConstraints(
+                    maxWidth: double.infinity,
+                    maxHeight: double.infinity,
+                  ),
+                  padding: const EdgeInsets.only(
+                      right: 20.0, left: 20.0, top: 10.0, bottom: 10.0),
+                  decoration: BoxDecoration(
+                    color: const Color(979797),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: const [
                       BoxShadow(
@@ -198,34 +225,7 @@ class ServiceHomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(
                       right: 20.0, left: 20.0, top: 10.0, bottom: 10.0),
                   decoration: BoxDecoration(
-                    color: Color(979797),
-                    borderRadius: BorderRadius.circular(10),
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Colors.black12,
-                        spreadRadius: 1,
-                        blurRadius: 1,
-                      ),
-                    ],
-                  ),
-                  child: const Text(
-                    "Airtime",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 15,
-                    ),
-                  ),
-                ),
-                Container(
-                  constraints: const BoxConstraints(
-                    maxWidth: double.infinity,
-                    maxHeight: double.infinity,
-                  ),
-                  padding: const EdgeInsets.only(
-                      right: 20.0, left: 20.0, top: 10.0, bottom: 10.0),
-                  decoration: BoxDecoration(
-                    color: Color(979797),
+                    color: const Color(979797),
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: const [
                       BoxShadow(
@@ -255,6 +255,98 @@ class ServiceHomeScreen extends StatelessWidget {
               indent: 20,
               endIndent: 0,
               color: Colors.green,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  constraints: const BoxConstraints(
+                    maxWidth: double.infinity,
+                    maxHeight: double.infinity,
+                  ),
+                  padding: const EdgeInsets.only(
+                      right: 20.0, left: 20.0, top: 10.0, bottom: 10.0),
+                  decoration: BoxDecoration(
+                    color: const Color(979797),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 1,
+                        blurRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: const Text(
+                    "Luku",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15,
+                    ),
+                  ),
+                ),
+                Container(
+                  constraints: const BoxConstraints(
+                    maxWidth: double.infinity,
+                    maxHeight: double.infinity,
+                  ),
+                  padding: const EdgeInsets.only(
+                      right: 20.0, left: 20.0, top: 10.0, bottom: 10.0),
+                  decoration: BoxDecoration(
+                    color: const Color(979797),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 1,
+                        blurRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: const Text(
+                    "Songesha",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15,
+                    ),
+                  ),
+                ),
+                Container(
+                  constraints: const BoxConstraints(
+                    maxWidth: double.infinity,
+                    maxHeight: double.infinity,
+                  ),
+                  padding: const EdgeInsets.only(
+                      right: 20.0, left: 20.0, top: 10.0, bottom: 10.0),
+                  decoration: BoxDecoration(
+                    color: const Color(979797),
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 1,
+                        blurRadius: 1,
+                      ),
+                    ],
+                  ),
+                  child: const Text(
+                    "Airtime",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
             ),
           ],
         ),
