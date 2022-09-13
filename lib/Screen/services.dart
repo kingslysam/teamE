@@ -96,17 +96,47 @@ class ServiceHomeScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 0, 10, 0),
                     child: Column(
-                      children: const [
+                      children: [
                         // Text("in"), Text("out")
-                        Icon(
-                          Icons.arrow_upward,
-                          color: Colors.green,
-                          size: 18.0,
+                        Row(
+                          children: const [
+                            Icon(
+                              Icons.arrow_upward,
+                              color: Colors.green,
+                              size: 18.0,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              "25,000",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w900,
+                              ),
+                            )
+                          ],
                         ),
-                        Icon(
-                          Icons.arrow_downward,
-                          color: Colors.red,
-                          size: 18.0,
+                        Row(
+                          children: const [
+                            Icon(
+                              Icons.arrow_downward,
+                              color: Colors.red,
+                              size: 18.0,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              "45,000",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w900,
+                              ),
+                            )
+                          ],
                         ),
                       ],
                     ),
