@@ -238,7 +238,7 @@ var cardData = [
   {
     "Icon": Icons.local_grocery_store,
     "Task": "Groceries",
-    "T_rem": "4 10 transactions",
+    "T_rem": "10 transactions",
     "c_amount": "5.000",
     "t_amount": "7.000",
   },

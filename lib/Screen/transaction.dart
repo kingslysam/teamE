@@ -4,7 +4,6 @@ import 'package:tcms_group4/Constants/theme.dart';
 import 'package:tcms_group4/Constants/utils.dart';
 import 'package:tcms_group4/Screen/image_constant.dart';
 import 'package:tcms_group4/Widgets/common_image_view.dart';
-import 'package:tcms_group4/Widgets/custom_icon_btn.dart';
 import 'package:tcms_group4/theme/app_style.dart';
 
 class MyDetailsScreen extends StatelessWidget {

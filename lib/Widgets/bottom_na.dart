@@ -51,7 +51,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ),
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.account_balance_wallet),
+        icon: const Icon(Icons.balance),
         title: ("Transactions"),
         activeColorPrimary: Colors.green,
         inactiveColorPrimary: Colors.grey,
